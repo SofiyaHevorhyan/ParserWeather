@@ -1,5 +1,6 @@
 /*
- *
+ * Class Coordinates for representation of latitude and longitude of the city
+ * Created by Sofiya Hevorhyan on 15.10.2018
  */
 
 import lombok.Getter;
@@ -19,7 +20,7 @@ public class Coordinates {
 
     @SneakyThrows
     public static Coordinates parse(String url) {
-        Element geo = Jsoup.connect(url).get().select("span.geolala").first();
+        Element geo = Jsoup.connect(url).get().select("span.geo").first();
         if (geo != null) {
             String[] coordinates = geo.text().split("[; ]+");
             System.out.println(coordinates[0]);
