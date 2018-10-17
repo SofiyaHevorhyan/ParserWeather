@@ -23,11 +23,8 @@ public class Coordinates {
         Element geo = Jsoup.connect(url).get().select("span.geo").first();
         if (geo != null) {
             String[] coordinates = geo.text().split("[; ]+");
-            System.out.println(coordinates[0]);
-            System.out.println(coordinates[1]);
 
             Coordinates myCoordinates = new Coordinates();
-
             myCoordinates.setLat(coordinates[0]);
             myCoordinates.setLongitude(coordinates[1]);
 
