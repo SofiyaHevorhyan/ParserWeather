@@ -39,14 +39,12 @@ public class Main {
                 parsedCities[counter] = myCity;
 
                 if (myCity.getName().contains(nameCity)) {
-                    System.out.println("found");
                     break;
                 }
                 counter++;
             }
         }
         if (parsedCities[counter] != null) {
-            System.out.println("weather");
             System.out.println(parsedCities[counter].getWeather());
         } else {
             System.out.println(format("Sorry, we couldn't find city %s in out list", nameCity));
